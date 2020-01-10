@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simple_calculator</title>
+	<style>
+		.hello{
+			text-align: center;
+			padding: 10px;
+			border: 5px solid;
+
+		}
+	</style>
+</head>
+<body>
+	<script>
+    function plus(a, b) {
+			     return (a + b);
+			 }
+
+			 function minus(a, b) {
+			     return (a - b);
+			 }
+
+			 function multiply(a, b) {
+			     return (a * b);
+			 }
+
+			 function divide(a, b) {
+			     return (a / b);
+			 }
+
+			 function calc() {
+			     var x = parseFloat( document.getElementById("oper1").value );
+			     var y = document.getElementById("operx").value;
+			     var z = parseFloat( document.getElementById("oper2").value );
+
+
+			     switch (y) {
+			         case '0':
+			             w = plus(x, z);
+			             break;
+
+			         case '1':
+			             w = minus(x, z);
+			             break;
+
+			         case '2':
+			             w = multiply(x, z);
+			             break;
+
+			         case '3':
+			             w = divide(x, z);
+			             break;
+
+			         default:
+			             w = "Don't really know..";
+			     }
+
+			     document.getElementById("resul").value = w;
+			 }
+		</script>
+		<center><h1>Simple Calculator using Functions</h1></center>
+	<div class="hello">
+	<center>
+		Enter 1st Number: <input type="text" id="oper1" value="" style="margin-top: 5px;"><br>
+		<select id="operx" style="margin-top: 5px;">
+		    <option value="0">+</option>
+		    <option value="1">-</option>
+		    <option value="2">*</option>
+		    <option value="3">/</option>
+		</select><br>
+		Enter 2nd Number: <input type="text" id="oper2" value="" style="margin-top: 5px;"><br>
+		<input type="button" onClick="calc();" value="="style="margin-top: 5px;"><br>
+		Result: <input type="text" id="resul" value=""style="margin-top: 5px;">
+	</center>	
+	</div>
+</body>
+</html>
